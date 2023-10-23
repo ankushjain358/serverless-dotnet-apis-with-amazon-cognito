@@ -42,7 +42,7 @@ The [resource server](https://www.oauth.com/oauth2-servers/the-resource-server/)
 	}
 	```
 6. To enable authorization using custom scopes, add the following authorization policies.
-	```
+	```cs
 	var builder = WebApplication.CreateBuilder(args);
 
 	// add authorization policy

@@ -11,7 +11,7 @@ To create a .NET Core Lambda function as an API endpoint:
 2. Select **Empty Function** from the blueprints dialog.
 3. Install `Amazon.Lambda.APIGatewayEvents` NuGet package.
 4. Update you function as per below code.
-    ```
+    ```cs
     public APIGatewayProxyResponse FunctionHandler(APIGatewayProxyRequest apigProxyEvent, ILambdaContext context)
     {
 

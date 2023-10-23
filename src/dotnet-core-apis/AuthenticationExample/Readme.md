@@ -11,7 +11,7 @@ To create a .NET Core Lambda function as an API endpoint:
 2. Select **Empty Function** from the blueprints dialog.
 3. Install `Amazon.Lambda.APIGatewayEvents` NuGet package.
 4. Also, install the following NuGet packages to configure Configurations and Dependecny Injection.
-    ````xml
+    ```xml
     <!-- Packages required for Configuration -->
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="6.0.1" />
