@@ -6,18 +6,18 @@ This repository contains sample .NET applications that can be deployed as **Lamb
 
 The following AWS services are used while building serverless .NET APIs on AWS:
 
-- [Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
-- [AWS Lambda Function](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
-- [Amazon Cognito](https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html)
-- [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html) *(used for the deployment)*
+- Amazon API Gateway
+- AWS Lambda Function
+- Amazon Cognito
+- AWS CDK *(used for the deployment)*
 
 ## Table of Contents
-- [Benefits of building serverless .NET APIs]()
-- [Architecture]()
-- [Visual Studio Solution]()
-- [How to deploy]()
-- [API Gateway routes]()
-- [How to Test]()
+- [Benefits of building serverless .NET APIs](#benefits-of-building-serverless-net-apis)
+- [Architecture](#architecture)
+- [Directory Structure](#directory-structure)
+- [How to deploy](#how-to-deploy)
+- [API Gateway routes](#api-gateway-routes)
+- [How to Test](#how-to-test)
 
 ## Benefits of building serverless .NET APIs
 Below are some of the primary benefits of building serverless .NET APIs on AWS:
@@ -60,6 +60,7 @@ After having all the above prerequisites, you must establish how the AWS CDK aut
 ## API Gateway routes
 After the deployment, you can access the following endpoints to check the behavior of the serverless .NET APIs running on the AWS cloud.
 
+```
 https://<random-text>.execute-api.<region>.amazonaws.com/<stage-name>/
 |-- aspnet/
 |   |-- anonymouse-example/{proxy+}
@@ -69,9 +70,11 @@ https://<random-text>.execute-api.<region>.amazonaws.com/<stage-name>/
 `-- dotnet/
     |-- anonymouse-example
     `-- authorization-example
+```
 
 ## How to test
 1. Use ThunderClient extension in VS Code to test the APIs.
 2. Import the `collections` and `environment variables` in ThunderClient from `thunder-client` folder.
 3. Update the environment variable values with their actual values.
-4. Save everything, and you're good to go!
+4. Save everything.
+5. You're good to go!
