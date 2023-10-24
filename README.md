@@ -1,3 +1,5 @@
+[![.NET](https://github.com/ankushjain358/serverless-dotnet-apis-with-amazon-cognito/actions/workflows/dotnet.yml/badge.svg)](https://github.com/ankushjain358/serverless-dotnet-apis-with-amazon-cognito/actions/workflows/dotnet.yml)
+
 # Serverless .NET APIs using AWS Lambda, Amazon API Gateway and Amazon Cognito
 
 This repository provides you code samples along with the guidance how you can build serverless .NET APIs on AWS and secure them with Amazon Cognito.
