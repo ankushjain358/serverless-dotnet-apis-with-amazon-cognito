@@ -1,0 +1,165 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Serverless APIs with Cognito",
+    "dateExported": "2023-10-24T08:09:56.900Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "9a5020d1-4fd6-4967-bba5-1f4bb17e55dd",
+            "name": "ASP.NET Core",
+            "containerId": "",
+            "created": "2023-10-11T17:49:19.433Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "7bb8c720-861e-48cb-a05a-fbabc0120f16",
+            "name": ".NET Core",
+            "containerId": "",
+            "created": "2023-10-11T17:49:19.434Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "eaae0675-9117-41ed-baf0-9eb8fe716363",
+            "colId": "325244ca-64a5-486c-aa3c-502fe8f39e39",
+            "containerId": "9a5020d1-4fd6-4967-bba5-1f4bb17e55dd",
+            "name": "Anonymous example",
+            "url": "{{api_gateway_base_url}}/aspnet/anonymous-example/WeatherForecast",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2023-10-11T17:49:19.434Z",
+            "modified": "2023-10-24T07:37:59.392Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "none"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1ef8d93b-7d71-497b-b062-bb8ed87d2bae",
+            "colId": "325244ca-64a5-486c-aa3c-502fe8f39e39",
+            "containerId": "9a5020d1-4fd6-4967-bba5-1f4bb17e55dd",
+            "name": "Authentication example",
+            "url": "{{api_gateway_base_url}}/aspnet/authentication-example/Profile",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-10-11T17:49:19.433Z",
+            "modified": "2023-10-24T07:38:06.237Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "oauth2",
+                "oauth2": {
+                    "grantType": "authorization_code",
+                    "authUrl": "{{cognito_domain_url}}/oauth2/authorize",
+                    "tokenUrl": "{{cognito_domain_url}}/oauth2/token",
+                    "clientId": "{{client_id}}",
+                    "clientSecret": "{{client_secret}}",
+                    "clientAuth": "in-header",
+                    "scope": "{{basic_scopes}}",
+                    "tokenName": "id_token"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "e65dd62d-4019-4837-9ba1-a4d63c02e308",
+            "colId": "325244ca-64a5-486c-aa3c-502fe8f39e39",
+            "containerId": "7bb8c720-861e-48cb-a05a-fbabc0120f16",
+            "name": "Anonymous example",
+            "url": "{{api_gateway_base_url}}/dotnet/anonymous-example",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-10-11T17:49:19.437Z",
+            "modified": "2023-10-24T08:06:16.130Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "none"
+            },
+            "tests": []
+        },
+        {
+            "_id": "f2aafc4f-8fa2-47db-95a3-291ea026b0f5",
+            "colId": "325244ca-64a5-486c-aa3c-502fe8f39e39",
+            "containerId": "9a5020d1-4fd6-4967-bba5-1f4bb17e55dd",
+            "name": "RBAC Authorization example",
+            "url": "{{api_gateway_base_url}}/aspnet/authorization-example/Admin",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-10-11T17:49:19.435Z",
+            "modified": "2023-10-24T08:01:31.534Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "oauth2",
+                "oauth2": {
+                    "grantType": "authorization_code",
+                    "authUrl": "{{cognito_domain_url}}/oauth2/authorize",
+                    "tokenUrl": "{{cognito_domain_url}}/oauth2/token",
+                    "clientId": "{{client_id}}",
+                    "clientSecret": "{{client_secret}}",
+                    "clientAuth": "in-header",
+                    "scope": "{{basic_scopes}}",
+                    "tokenName": "id_token"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "c2f69c46-2aca-44f3-92f8-5c29cc520a92",
+            "colId": "325244ca-64a5-486c-aa3c-502fe8f39e39",
+            "containerId": "7bb8c720-861e-48cb-a05a-fbabc0120f16",
+            "name": "Authorization example",
+            "url": "{{api_gateway_base_url}}/dotnet/authorization-example",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-10-11T17:49:19.438Z",
+            "modified": "2023-10-24T08:05:31.650Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "oauth2",
+                "oauth2": {
+                    "grantType": "authorization_code",
+                    "authUrl": "{{cognito_domain_url}}/oauth2/authorize",
+                    "tokenUrl": "{{cognito_domain_url}}/oauth2/token",
+                    "clientId": "{{client_id}}",
+                    "clientSecret": "{{client_secret}}",
+                    "clientAuth": "in-header",
+                    "scope": "{{basic_scopes}}",
+                    "tokenName": "id_token"
+                }
+            },
+            "tests": []
+        },
+        {
+            "_id": "895e6287-2df1-4790-862a-cdd1f94d90e5",
+            "colId": "325244ca-64a5-486c-aa3c-502fe8f39e39",
+            "containerId": "9a5020d1-4fd6-4967-bba5-1f4bb17e55dd",
+            "name": "Custom Scopes Authorization example",
+            "url": "{{api_gateway_base_url}}/aspnet/custom-scopes-authorization-example/Photo",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-10-11T17:49:19.436Z",
+            "modified": "2023-10-24T07:38:12.841Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "oauth2",
+                "oauth2": {
+                    "grantType": "authorization_code",
+                    "authUrl": "{{cognito_domain_url}}/oauth2/authorize",
+                    "tokenUrl": "{{cognito_domain_url}}/oauth2/token",
+                    "clientId": "{{client_id}}",
+                    "clientSecret": "{{client_secret}}",
+                    "clientAuth": "in-header",
+                    "scope": "{{advanced_scopes}}"
+                }
+            },
+            "tests": []
+        }
+    ]
+}

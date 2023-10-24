@@ -1,0 +1,32 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "Serverless APIs with Cognito",
+    "dateExported": "2023-10-24T08:10:21.623Z",
+    "version": "1.0",
+    "variables": [
+        {
+            "name": "cognito_domain_url",
+            "value": "https://ankushjain.auth.ap-south-1.amazoncognito.com"
+        },
+        {
+            "name": "client_id",
+            "value": "5j3rdv8rip1a8c8n79s89dd7gj"
+        },
+        {
+            "name": "client_secret",
+            "value": "1fl6575s4m67p9qj9jgorb56415n0ur915lp5tva5880flbfk952"
+        },
+        {
+            "name": "basic_scopes",
+            "value": "openid+profile"
+        },
+        {
+            "name": "advanced_scopes",
+            "value": "openid+profile+com.example.photos/basic+com.example.photos/read+com.example.photos/write"
+        },
+        {
+            "name": "api_gateway_base_url",
+            "value": "https://v5ebvuio03.execute-api.ap-south-1.amazonaws.com/prod"
+        }
+    ]
+}

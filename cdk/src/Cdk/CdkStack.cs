@@ -158,7 +158,7 @@ namespace Cdk
             #region ASP.NET Core API - Lambda functions
 
             // ASP.NET Core API - Lambda function Anonymous Example
-            var aspnetCoreAnonymousExample = new Function(this, ASPNETCoreWebAPI_AnonymousExample, new FunctionProps
+            var aspnetCoreAnonymousExample = new Function(this, nameof(ASPNETCoreWebAPI_AnonymousExample), new FunctionProps
             {
                 MemorySize = 512,
                 Timeout = Duration.Seconds(30),
@@ -178,7 +178,7 @@ namespace Cdk
             });
 
             // ASP.NET Core API - Lambda function Authentication Example
-            var aspnetCoreAuthenticationExample = new Function(this, ASPNETCoreWebAPI_AuthenticationExample, new FunctionProps
+            var aspnetCoreAuthenticationExample = new Function(this, nameof(ASPNETCoreWebAPI_AuthenticationExample), new FunctionProps
             {
                 MemorySize = 512,
                 Timeout = Duration.Seconds(30),
@@ -198,7 +198,7 @@ namespace Cdk
             });
 
             // ASP.NET Core API - Lambda function Role Based Authorization Example
-            var aspnetCoreRoleBasedAuthorizationExample = new Function(this, ASPNETCoreWebAPI_AuthorizationExample, new FunctionProps
+            var aspnetCoreRoleBasedAuthorizationExample = new Function(this, nameof(ASPNETCoreWebAPI_AuthorizationExample), new FunctionProps
             {
                 MemorySize = 512,
                 Timeout = Duration.Seconds(30),
@@ -218,7 +218,7 @@ namespace Cdk
             });
 
             // ASP.NET Core API - Lambda function Custom Scopes Authorization Example
-            var aspnetCoreCustomScopesAuthorizationExample = new Function(this, ASPNETCoreWebAPI_CustomScopesAuthorizationExample, new FunctionProps
+            var aspnetCoreCustomScopesAuthorizationExample = new Function(this, nameof(ASPNETCoreWebAPI_CustomScopesAuthorizationExample), new FunctionProps
             {
                 MemorySize = 512,
                 Timeout = Duration.Seconds(30),
@@ -242,7 +242,7 @@ namespace Cdk
             #region .NET Core API - Lambda functions
 
             // .NET Core API - Lambda function Anonymous Example
-            var dotnetCoreAnonymousExample = new Function(this, DotNetCoreAPI_AnonymousExample, new FunctionProps
+            var dotnetCoreAnonymousExample = new Function(this, nameof(DotNetCoreAPI_AnonymousExample), new FunctionProps
             {
                 MemorySize = 512,
                 Timeout = Duration.Seconds(30),
@@ -255,7 +255,7 @@ namespace Cdk
             });
 
             // .NET Core API - Lambda function Authorization example
-            var dotnetCoreAuthorizationExample = new Function(this, DotNetCoreAPI_AuthorizationExample, new FunctionProps
+            var dotnetCoreAuthorizationExample = new Function(this, nameof(DotNetCoreAPI_AuthorizationExample), new FunctionProps
             {
                 MemorySize = 512,
                 Timeout = Duration.Seconds(30),
@@ -343,24 +343,21 @@ namespace Cdk
 
             dotnetResourceRoute
                 .AddResource("anonymous-example")
-                .AddProxy(new ProxyResourceOptions
+                .AddMethod("ANY", new LambdaIntegration(dotnetCoreAnonymousExample, new LambdaIntegrationOptions
                 {
-                    AnyMethod = true,
-                    DefaultIntegration = new LambdaIntegration(dotnetCoreAnonymousExample)
-                });
-
+                    Proxy = true
+                }));
 
             dotnetResourceRoute
-                .AddResource("authorization-example")
-                .AddProxy(new ProxyResourceOptions
+              .AddResource("authorization-example")
+              .AddMethod("ANY", new LambdaIntegration(dotnetCoreAuthorizationExample, new LambdaIntegrationOptions
+              {
+                  Proxy = true
+              }),
+                new MethodOptions
                 {
-                    AnyMethod = true,
-                    DefaultIntegration = new LambdaIntegration(dotnetCoreAuthorizationExample),
-                    DefaultMethodOptions = new MethodOptions
-                    {
-                        AuthorizationType = AuthorizationType.COGNITO,
-                        Authorizer = authorizer,
-                    }
+                    AuthorizationType = AuthorizationType.COGNITO,
+                    Authorizer = authorizer,
                 });
 
             #endregion
