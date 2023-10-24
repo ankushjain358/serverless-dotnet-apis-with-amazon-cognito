@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationExample", "asp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomScopesAuthorizationExample", "aspnet-core-apis\CustomScopesAuthorizationExample\CustomScopesAuthorizationExample.csproj", "{1AB2FFB7-77E8-4270-84A4-F457647E5349}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizationExample", "dotnet-core-apis\AuthenticationExample\AuthorizationExample.csproj", "{1D46EC1B-FB51-4D39-8786-55D72D92BF64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizationExample", "dotnet-core-apis\AuthorizationExample\AuthorizationExample.csproj", "{1D46EC1B-FB51-4D39-8786-55D72D92BF64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
